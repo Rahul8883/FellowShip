@@ -197,7 +197,7 @@ module.exports = {
       stTime = readsync.question("Enter for start watch...")
       var start = this.startTime();
 
-      spTime = readsync.question("Enter for start watch...")
+      spTime = readsync.question("Enter for stop watch...")
       var end = this.endTime();
       console.log("ellapse time:-" + (end - start));
 

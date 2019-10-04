@@ -68,7 +68,7 @@ module.exports = {
             }
         }
         console.log(array);
-        this.isPlindrome(array)
+       // this.isPlindrome(array)
     },
 
 
@@ -324,14 +324,22 @@ var d0=Math.floor(d1+1)
 
  sqrt(c){
      var t=c;
-     var t=c;
      var  epsilon=1e-15;
      while(Math.abs(t-c/t)>epsilon*t) {
          t=(c/t+t)/2;
          
      }
      console.log(t);
- }
+ },
+ mergeSort(array){
+     if(array>=1){
+         return array;
+     }
+     const middile=(Math.floor(array.length)/2);
+     const left=array.slice(0, middile);
+     const right=array.slice(middile);
+     return merge(this.mergeSort(left), this.mergeSort(right));
+ },
 }
 
 
