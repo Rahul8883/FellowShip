@@ -1,0 +1,53 @@
+ {
+    "Rice": [
+        {
+            "Name": "Basmati rice",
+            "Weight": 20,
+            "Price": 120
+        },
+     {
+            "Name": "Jasmine rice",
+            "Weight": 30,
+            "Price": 90
+        },
+        {
+            "Name": "brown rice",
+            "Weight": 40,
+            "Price": 70
+        }
+    ],
+    "Pulses": [
+        {
+            "Name": "Kidney beans",
+            "Weight": 20,
+            "Price": 100
+        },
+     {
+            "Name": "Black gram",
+            "Weight": 22,
+            "Price": 105
+        },
+        {
+            "Name": "Garbanzo beans",
+            "Weight": 35,
+            "Price": 65
+        }
+    ],
+    "Wheats": [
+        {
+            "Name": "Durum wheat",
+            "Weight": 20,
+            "Price": 40
+        },
+     {
+            "Name": "Bread wheat",
+            "Weight": 10,
+            "Price": 25
+        },
+        {
+            "Name": "Sharbati wheat",
+            "Weight": 30,
+            "Price": 55
+        }
+    ]
+}

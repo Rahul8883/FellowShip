@@ -1,0 +1,19 @@
+{
+    "Stock": [
+        {
+            "Stock_Name": "Financial Services",
+            "Number_Of_share": 1000,
+            "share_Price": 50000
+        },
+     {
+            "Stock_Name": "Consumer Cyclical",
+            "Number_Of_share": 1500,
+            "share_Price": 20000
+        },
+        {
+            "Stock_Name": "Basic Materials",
+            "Number_Of_share": 1100,
+            "share_Price": 10000
+        }
+    ]
+}
