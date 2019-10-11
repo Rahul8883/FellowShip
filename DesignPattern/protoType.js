@@ -1,4 +1,10 @@
-function CustomerPrototype(proto) {
+/**
+    * @Auther: Rahul Ranjan
+    * @purpose: Prototype Design pattern 
+    * @Since: 09-oct-2019
+    */
+   
+function customerPrototype(proto) {
     this.proto = proto;
     this.clone = function () {
         var customer = new Customer();
@@ -19,7 +25,7 @@ function Customer(first, last, status) {
 }
 function run() {
     var proto = new Customer("Rahul", "Ranjan", "Panding");
-    var prototype = new CustomerPrototype(proto);
+    var prototype = new customerPrototype(proto);
     var customer = prototype.clone();
     customer.say();
 }

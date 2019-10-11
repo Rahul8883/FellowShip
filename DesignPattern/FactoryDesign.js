@@ -1,3 +1,9 @@
+/**
+    * @Auther: Rahul Ranjan
+    * @purpose: Factory Design pattern 
+    * @Since: 09-oct-2019
+    */
+
 function watchFactory(price) {
     return {
         price,

@@ -1,3 +1,9 @@
+/**
+    * @Auther: Rahul Ranjan
+    * @purpose: SingleTon Design pattern 
+    * @Since: 09-oct-2019
+    */
+   
 var Singleton = (function () {
     var instance;
     function createInstance() {
