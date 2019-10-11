@@ -1,14 +1,8 @@
 /*-----------------------------FUNCTIONAL PROGRAM ------------------------------*/
-
 /*--------------------------Regular Expression------------------------ */
-
 /*--------This is use to take the input from the User at runtime!!-------*/
-
 var readsync = require('readline-sync')
-
-
 module.exports = {
-
    /*
    @purpose: User Input and Replace String Template “Hello <<UserName>>, How are you?” 
    @Auther: Rahul Ranjan
@@ -17,7 +11,6 @@ module.exports = {
    @Since: 25-sep-2019
    */
    replaceString(str) {
-
       var givenStringIs = "Hello <Username>, how are you";
       var resplacedString = givenStringIs.replace('<Username>', str)
       console.log(resplacedString);
@@ -29,12 +22,11 @@ module.exports = {
   @return 
   @Since: 25-sep-2019
   */
-   isFlipCoin(Toss) {
+   isFlipCoin(toss) {
       var head = 0, tail = 0;
-      var Random = Math.random()
-
+      var randomOut = Math.random()
       if (Toss > 0) {
-         if (Random > 0.5) {
+         if (randomout > 0.5) {
             head++;
          } else {
             tail++;
@@ -53,7 +45,7 @@ module.exports = {
   @return 
   @Since: 25-sep-2019
   */
-   leapyear(year) {
+   leapYear(year) {
       if (year > 999 && year <= 9999) {
          if ((year % 100 === 0) || (year % 400 === 0) && (year % 4 === 0)) {
             console.log("Leap Year");
@@ -72,7 +64,6 @@ module.exports = {
   @return 
   @Since: 25-sep-2019
   */
-
    isPowerOf_2(userinput) {
       if (userinput >= 0 && userinput < 31) {
          for (var i = 0; i <= userinput; i++) {
@@ -106,8 +97,7 @@ module.exports = {
    @return 
    @Since: 25-sep-2019
    */
-
-   isprimeFactor(userinput) {
+   isPrimeFactor(userinput) {
       for (let i = 2; i < userinput; i++) {
          while (userinput % i == 0) {
             userinput = userinput / i;
@@ -130,7 +120,6 @@ module.exports = {
    isDistance(userinput_1, userinput_2) {
       var DistanceResult = Math.sqrt((Math.pow(userinput_1, 2)) + (Math.pow(userinput_2, 2)));
       console.log("Euclidean Distance is: " + DistanceResult);
-
    },
    /*
   @purpose: Coupon Number
@@ -157,7 +146,6 @@ module.exports = {
    */
    isTriplates(input) {
       console.log("input", input);
-
       //var input=[1,2,-3,0,5];
       var size = input.length;
       for (var i = 0; i < size - 2; i++) {
@@ -178,10 +166,7 @@ module.exports = {
    @return 
    @Since: 25-sep-2019
    */
-
-
-
-
+  
    startTime() {
       var date = new Date();
       return date.getMilliseconds();

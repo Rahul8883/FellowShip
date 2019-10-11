@@ -1,13 +1,10 @@
 /*------------User Defined Class Node----------------*/
-
-
- class Node {
+class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-
 class UnorderedLinkedList {
     constructor() {
         this.head = null;
@@ -21,14 +18,11 @@ class UnorderedLinkedList {
             return false;
         }
     }
-
     /*-------------Find the size of LinkedList-----------*/
-
     getListSize() {
         console.log(this.size);
     }
     /*---------Add the data at first index-----------*/
-
     insertAtFirst(data) {
         var new_Node = new Node(data);
         if (this.head == null) {
@@ -37,11 +31,8 @@ class UnorderedLinkedList {
         } else {
             new_Node.next = this.head;
             this.head = new_Node;
-
-
         }
     }
-
     /*------------insert at last-----------*/
     insertAtLast(data) {
         var new_Node = new Node(data);
@@ -70,9 +61,7 @@ class UnorderedLinkedList {
             console.log("Insertion is not possible...")
         }
     }
-
     /*------------Remove at first position--------------*/
-
     removeAtFirst() {
         if (this.head == null) {
             console.log("List is already Empty");
@@ -81,9 +70,7 @@ class UnorderedLinkedList {
             this.size--;
         }
     }
-
     /*------------Remove at last index---------*/
-
     removeAtLast() {
         if (this.head == null) {
             console.log("lis is already empty");
@@ -99,18 +86,10 @@ class UnorderedLinkedList {
             this.size--;
         }
     }
-
     removeAtposition(index) {
-        // if (this.head = null) {
-        //     console.log("List is already Empty..");
-        // } else if (this.size == 1) {
-        //     this.head = null;
-        //     this.size--;
-        // } else {
         var temp = this.head;
         var temp1 = this.head.next;
         for (var i = 0; i < index; i++) {
-
             if (temp1.next == null) {
                 break;
             }
@@ -119,11 +98,8 @@ class UnorderedLinkedList {
         }
         temp.next = temp1.next;
         this.size--;
-        //  }
     }
-
     /*-----------------Search the Node-----------*/
-
     search(data) {
         var temp = head;
         while (temp !== null) {
@@ -135,7 +111,6 @@ class UnorderedLinkedList {
         }
     }
     /*-----------Display the List------------*/
-
     viewList() {
         console.log("Data is:--");
         var temp;
@@ -143,21 +118,13 @@ class UnorderedLinkedList {
             console.log("List is empty");
         } else {
             var temp = this.head;
-
             var str = "";
             while (temp) {
                 str += temp.data + " ";
                 temp = temp.next;
             }
-
-            // for (var i = 0; i <= this.size; i++) {
-            //     console.log(" " + this.data);
-            //     temp = temp.next;
-            // }
         }
         console.log(str);
-
-
     }
 }
 // var l1 = new UnorderedLinkedList();
@@ -173,8 +140,6 @@ class UnorderedLinkedList {
 // l1.insertAtLast("rahulRanjan");
 // l1.insertAtLast(20);
 // l1.viewList();
-
-
-module.exports={
+module.exports = {
     Node, UnorderedLinkedList
 }
