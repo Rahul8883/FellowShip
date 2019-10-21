@@ -1,26 +1,26 @@
-// import React from "react";
-// import TextField from '@material-ui/core/TextField';
-// import Button from '@material-ui/core/Button';
-// import MenuItem from '@material-ui/core/MenuItem';
-// import { chatServices, userChatArray } from "../../Services/chatServices";
-// import AppBar from '@material-ui/core/AppBar';
-// import '../../scss/main.scss';
+import React from "react";
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
+import { chatServices, userChatArray } from "../../Services/chatServices";
+import AppBar from '@material-ui/core/AppBar';
+import '../../scss/main.scss';
 
-// import io from 'socket.io-client';
-// const socket = io.connect('http://localhost:4000');
-// export default class dashBoard extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             onlineUser: [],
-//             MsgArray: [],
-//             message: "",
-//             MsgDisplay: "",
-//             Receiver: '',
-//             Sender: '',
-//             msg: [],
-//         }
-//     }
+import io from 'socket.io-client';
+const socket = io.connect('http://localhost:4000');
+export default class dashBoard extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            onlineUser: [],
+            MsgArray: [],
+            message: "",
+            MsgDisplay: "",
+            Receiver: '',
+            Sender: '',
+            msg: [],
+        }
+    }
 //     componentDidMount() {
        
 //         chatServices()

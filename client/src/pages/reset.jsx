@@ -38,7 +38,6 @@ export default class reset extends Component {
                             placeholder="password"
                             variant="outlined"
                             onChange={this.handlerPassword}
-                            value=
                         />
                         <TextField
                             label="comfirmPassword"
