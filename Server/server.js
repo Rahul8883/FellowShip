@@ -1,3 +1,6 @@
+/**
+ * @description: server file
+ */
 const dbConn = require('../Server/configuration/dbConfig')
 const routes = require('../Server/routes/userRoutes');
 const mongoose = require('mongoose');
