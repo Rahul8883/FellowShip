@@ -1,14 +1,14 @@
 /**
-    * @Auther: Rahul Ranjan
-    * @purpose:Create a JSON file having Inventory Details for Rice,
-    *          Pulses and Wheats with properties name, weight, price per kg. 
-    * @Since: 08-oct-2019
-    */
+ * @Auther: Rahul Ranjan
+ * @purpose:Create a JSON file having Inventory Details for Rice,
+ *          Pulses and Wheats with properties name, weight, price per kg. 
+ * @Since: 08-oct-2019
+ */
 
 var utiRice = require('../inventrydataManagement/Glossary');
 var fs = require('fs');
 var content = fs.readFileSync('inventry.json', 'utf-8')
-// console.log(content);
+console.log(content);
 var obj = JSON.parse(content);
 console.log('====================================');
 console.log("Resultant of Rice");

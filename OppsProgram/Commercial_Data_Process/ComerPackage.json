@@ -1,0 +1,34 @@
+{ 
+    "AccountList": [
+          {
+            "AccountName":"sachin",
+            "ShareNumber": 10,
+            "StockPrice": 110.0
+          },
+          {
+            "AccountName": "Rahul",
+            "ShareNumber": 4,
+            "StockPrice": 240.0
+          },
+          {
+            "AccountName":"Manoj",
+            "ShareNumber": 50,
+            "StockPrice": 540.0
+          },
+          {
+            "AccountName": 25,
+            "ShareNumber": 2500,
+            "StockPrice": 124.0
+          },
+          {
+            "AccountName": "Gautam",
+            "ShareNumber": 50,
+            "StockPrice": 820.0
+          },
+          {
+            "AccountName": "Balmiki k.Ajay",
+            "ShareNumber": 590,
+            "StockPrice": 124.0
+          }
+    ]
+ }

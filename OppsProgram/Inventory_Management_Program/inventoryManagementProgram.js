@@ -35,5 +35,5 @@ for (var i = 0; i < len; i++) {
     inventoryArray1.push(data);
 }
 console.log("inventoryArray", inventoryArray1);
-let dataaaa = JSON.stringify(inventoryArray1);
-fs.writeFileSync('Program_OutPut.json', dataaaa);
+let value = JSON.stringify(inventoryArray1);
+fs.writeFileSync('Program_OutPut.json', value);
