@@ -28,6 +28,7 @@ export default class login extends Component {
         console.log("Entered in handle sign in");
         controller.login(this.state.email, this.state.password).then((res) => {
             console.log("login", res);
+            localStorage.setItem('email',this.state.email)
             this.props.history.push('/dashboard')
         }).catch(err => {
             console.log("err in login component ", err);

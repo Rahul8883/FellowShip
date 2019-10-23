@@ -29,7 +29,7 @@
 }
 
 .registration-card {
-    width: 100%;
+    width: 36%;
     background-color: black;
     text-align: center;
     justify-content: center;
@@ -81,5 +81,23 @@
 }
 .dashboard-container{
     display: flex;
+    
   
 }
+.container{
+    display: flex;
+    justify-content: center;
+}
+.header{
+    width: 100vw;
+    height: 10vh;
+    background: gold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-details{
+    display: flex;
+    align-items: center;
+}
+

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, MenuItem } from '@material-ui/core';
+import { Card, MenuItem ,Button} from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
 import controller from '../controllers/userController';
 export default class Dashboard extends React.Component {
@@ -26,7 +26,7 @@ export default class Dashboard extends React.Component {
             }).catch(err => {
                 console.log("Error after hitting get all user api", err);
             })
-          
+
         } catch (err) {
             console.log("Err in dashboard", err);
         }
@@ -34,7 +34,18 @@ export default class Dashboard extends React.Component {
     render() {
         return (
             <div className="container">
-                <div className="dashboard-cards">
+                <Card class className="WholeDashboad">
+                <div className="header">
+                    <div>
+                        <span style={{ fontFamily: "TimesNewRoman", fontSize: "50px" }}>ChatApp Dashboard</span>
+                    </div>
+                    <div className="header-details">
+                        {localStorage.getItem('email')}
+                        <Button >Logout</Button>
+                    </div>
+                </div>
+                <div className="dashboard-card1">
+         
                     <Card className="users-card">
                         {
                             this.state.allUsers.map(key => {
@@ -46,6 +57,8 @@ export default class Dashboard extends React.Component {
                             })
                         }
                     </Card>
+                </div>
+                <div>
                     <Card className="chat-card">
                         {
                             this.state.allMsg.map(key => {
@@ -56,24 +69,20 @@ export default class Dashboard extends React.Component {
                                 )
                             })
                         }
-
                     </Card>
-                </div>
 
-                <div>
-                    
-                        <div>
-                            <TextField
-                                label="Message"
-                                type="Message"
-                                name="Message"
-                                placeholder="Message"
-                                variant="outlined"
-                            />
-                        </div>
-                    
+                    <TextField
+                        label="Message"
+                        type="Message"
+                        name="Message"
+                        fullWidth
+                        placeholder="Message"
+                        variant="outlined"
+                    />
                 </div>
-            </div>
+                </Card>
+            </div >
+     
         )
     }
 }
