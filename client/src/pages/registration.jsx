@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';
 import { withRouter } from 'react-router-dom';
+import controller from "../controllers/userController";
 class registration extends Component {
     constructor(props) {
         super(props);
@@ -44,11 +45,20 @@ class registration extends Component {
             password : password
         })
     }
+    handleRegister =()=>{
+        controller.register(this.state.firstName, this.state.lastName, this.state.email, this.state.password)
+        .then((res)=>{
+            console.log("Registered", res);
+        }).catch(error=>{
+            console.log("Error occur in registration..",error);
+            
+        })
+    }
     render() {
         return (
             <div className="registration-container">
                 <Card className="registration-card">
-                    <div>
+                    <div className="registration-contents">
                         <div className="heading">Registration</div>
                         <div>
                             <TextField className="registration_Padding"
@@ -97,7 +107,7 @@ class registration extends Component {
                         </div> 
                     </div>
                     <div>
-                        <Button color="primary">SignUp</Button>
+                        <Button color="primary" onClick={this.handleRegister}>SignUp</Button>
                     </div>
                 </Card>
             </div>

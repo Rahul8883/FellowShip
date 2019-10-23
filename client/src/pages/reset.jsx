@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';
+import controller from '../controllers/userController'
+
 export default class reset extends Component {
     constructor(props) {
         super(props);
@@ -23,6 +25,14 @@ export default class reset extends Component {
         console.log("it works ! you clicked.. " + confirmPassword);
         this.setState({
             confirmPassword : confirmPassword
+        })
+    }
+    handleReset = () => {
+        console.log("Entered in handle Reset in");
+        controller.reset(this.state.password, this.state.confirmPassword).then((res) => {
+            console.log("login", res);
+        }).catch(err => {
+            console.log("err in login component ", err);
         })
     }
     render() {
@@ -48,7 +58,7 @@ export default class reset extends Component {
                         />
                         </div>
                         <div>
-                            <Button color="primary">Submit</Button>
+                            <Button color="primary" onClick={this.handleReset}>Submit</Button>
                         </div>
                     </div>
                 </Card>

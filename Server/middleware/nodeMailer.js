@@ -6,7 +6,7 @@ exports.sendMail = (email, url) => {
         service: 'Gmail', // sets automatically host, port and connection security settings
         auth: {
             user: process.env.EMAIL,
-            pass: Process.env.PASSWORD
+            pass: process.env.PASSWORD
         }
     });
 

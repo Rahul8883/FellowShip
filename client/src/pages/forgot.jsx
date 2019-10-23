@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';
+import controller from '../controllers/userController'
 export default class forgot extends Component {
     constructor(props) {
         super(props);
@@ -14,6 +15,15 @@ export default class forgot extends Component {
         console.log("it work ! you clicked.." + email);
         this.setState({
             email : email
+        })
+    }
+
+    handleForgot = () => {
+        console.log("Entered in handle Reset in");
+        controller.forgot(this.state.email).then((res) => {
+            console.log("login", res);
+        }).catch(err => {
+            console.log("err in login component ", err);
         })
     }
     render() {
@@ -33,7 +43,7 @@ export default class forgot extends Component {
                         />
                         </div>
                         <div>
-                            <Button color="primary">submit</Button>
+                            <Button color="primary" onClick={this.handleForgot}>submit</Button>
                         </div>
                     </div>
                 </Card>
@@ -41,4 +51,3 @@ export default class forgot extends Component {
         );
     }
 }
-

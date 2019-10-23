@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';
+import controller from '../controllers/userController'
 export default class login extends Component {
     constructor(props) {
         super(props);
@@ -12,7 +13,6 @@ export default class login extends Component {
     handleEmail = (event) => {
         console.log("------------->event");
         const email = event.target.value;
-        console.log("It works ! you clicked.. " + email)
         this.setState({
             email: email
         })
@@ -20,16 +20,24 @@ export default class login extends Component {
     handlePassword = (event) => {
         console.log("-------------->event");
         const password = event.target.value;
-        console.log("it works ! you clicked.. "+ password)
         this.setState({
-            password : password
+            password: password
+        })
+    }
+    handleSignIn = () => {
+        console.log("Entered in handle sign in");
+        controller.login(this.state.email, this.state.password).then((res) => {
+            console.log("login", res);
+            this.props.history.push('/dashboard')
+        }).catch(err => {
+            console.log("err in login component ", err);
         })
     }
     render() {
         return (
             <div className="login-container">
                 <Card className="login-card">
-                    <div>
+                    <div className="login-contents">
                         <div>
                             <div className="heading">Login</div>
                         </div>
@@ -53,11 +61,12 @@ export default class login extends Component {
                                 variant="outlined"
                                 value={this.state.password}
                                 onChange={this.handlePassword}
-                            />
+                           />
                         </div>
+
                         <div>
-                            <Button color="primary">SignUp</Button>
-                            <Button color="primary">SignIn</Button>
+                            <Button color="primary" >SignUp</Button>
+                            <Button color="primary" onClick={this.handleSignIn}>SignIn</Button>
                         </div>
                         <div>
                             <Button color="primary">forgot</Button>
@@ -68,4 +77,3 @@ export default class login extends Component {
         );
     }
 }
-

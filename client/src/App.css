@@ -1,50 +1,85 @@
-#login-heading{
-    margin-top:0;
+#login-heading {
+    margin-top: 0;
 }
-.login-card{
-width: 38%;
-background-color: black;
-text-align: center;
-justify-content:center;
-align-content: center;
-padding: 30px;
-height: 257px;
+
+.login-card {
+    width: 38%;
+    background-color: black;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    height: 257px;
 }
-.heading{
+
+.heading {
     color: rgb(72, 39, 28);
     font-size: 23px;
-    }
-.login-container{
+}
+
+.login-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-#registration-heading{
-    margin-top:0;
+
+#registration-heading {
+    margin-top: 0;
 }
-.registration-card{
+
+.registration-card {
     width: 100%;
     background-color: black;
     text-align: center;
-    justify-content:center;
+    justify-content: center;
     align-content: center;
     padding: 30px;
 }
-.registration-container{
+
+.registration-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.heading{
-color: rgb(72, 39, 28);
-font-size: 23px;
+
+.heading {
+    color: rgb(72, 39, 28);
+    font-size: 23px;
 }
-.registration_padding{
-    display:inline-block;
-    padding:5px, 1px, 5px, 1px;
-    position:relative;
+
+.registration_padding {
+    display: inline-block;
+    padding: 5px, 1px, 5px, 1px;
+    position: relative;
     flex-direction: column;
-    vertical-align:top; 
+    vertical-align: top;
+}
+
+.login-contents>div {
+    margin: 1em;
+}
+
+.registration-contents>div {
+    margin: 1em;
+}
+.users-card{
+    width:30%;
+    height:450px;
+    border:1px solid black;
+}
+.chat-card{
+    width:50%;
+    height:450px;
+    border:1px solid black;
+}
+.dashboard-cards{
+    display: flex;
+    justify-content: space-around;
+    background: cadetblue;
+}
+.dashboard-container{
+    display: flex;
+  
 }

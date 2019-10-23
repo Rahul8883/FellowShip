@@ -1,5 +1,6 @@
 var jwt = require('jsonwebtoken');
 exports.generateToken = (id) => {
+    console.log("secrete key in generate token", process.env.SECRET_KEY);
     const genToken = jwt.sign({ id }, process.env.SECRET_KEY, { expiresIn: '365d' });
     return genToken;
 }

@@ -32,9 +32,6 @@ exports.SignUp = (req, res) => {
     }
 }
 exports.login = (req, res) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         req.checkBody('email', 'email is invalid ').isEmail();
         req.checkBody('password', 'password is invalid').notEmpty().len(8, 13);
@@ -44,7 +41,6 @@ exports.login = (req, res) => {
             response.error = error;
             response.success = false;
             return res.status(422).send(response);
-            console.log(error);
         } else {
             console.log("Controller login ", req.body);
             userService.login(req, (err, data) => {
@@ -52,7 +48,7 @@ exports.login = (req, res) => {
                     console.log("err", err);
                     res.status(404).send(err)
                 } else {
-                    res.status(200).send("login succesfully");
+                    res.status(200).send(data);
                 }
             })
         }
@@ -118,6 +114,24 @@ exports.reset = (req, res) => {
                 }
             })
         }
+    } catch (error) {
+        console.log("error", error);
+    }
+}
+exports.getUsers = (req, res) => {
+    console.log('====================================');
+    console.log("in con");
+    console.log('====================================');
+    try {
+        userService.getUsers(req, (err, data) => {
+            if (err) {
+                console.log("err", err);
+                res.status(404).send(err)
+            } else {
+                res.status(200).send(data)
+            }
+        })
+
     } catch (error) {
         console.log("error", error);
     }

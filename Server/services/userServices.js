@@ -31,12 +31,12 @@ exports.login = (req, callback) => {
 }
 exports.forgot = (req, callback) => {
     try {
-        console.log("data in login", req.body);
+        console.log("data in forgot services", req.body);
         modelAccess.forgot(req, (err, data) => {
             if (err) {
                 callback(err);
             } else {
-                console.log("Entered login services");
+                console.log("Entered forgot services");
                 callback(null, data);
             }
         })
@@ -57,5 +57,19 @@ exports.reset = (req, callback) => {
         })
     } catch (e) {
         console.log(e);
-    }npm 
+    }
+}
+exports.getUsers = (req, callback) => {
+    try {
+        modelAccess.getUsers(req, (err, data) => {
+            if (err) {
+                callback(err);
+            } else {
+                console.log("Entered reset services");
+                callback(null, data);
+            }
+        })
+    } catch (e) {
+        console.log(e);
+    }
 }

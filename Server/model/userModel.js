@@ -79,7 +79,7 @@ exports.login = (req, callback) => {
     }
 }
 exports.forgot = (req, callback) => {
-    console.log("Entered in user model", req.body);
+    console.log("Entered in user model forgot", req.body);
     try {
         user.findOne({
             "email": req.body.email
@@ -113,6 +113,19 @@ exports.reset = (req, callback) => {
                             callback(null, result)
                         }
                     })
+            }
+        })
+    } catch (e) {
+        console.log(e);
+    }
+}
+exports.getUsers = (req, callback) => {
+    try {
+        user.find({}, (err, result) => {
+            if (err) {
+                callback(err);
+            } else {
+                callback(null, result)
             }
         })
     } catch (e) {

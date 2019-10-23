@@ -5,6 +5,7 @@ import Login from './pages/Login';
 import Registration from './pages/registration';
 import Reset from './pages/reset';
 import Forgot from './pages/forgot';
+import Dashboard from './components/DashBoard';
 class App extends Component {
   render() {
     return (
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/registration" exact component={Registration}></Route>
           <Route path="/forgot" exact component={Forgot}></Route>
           <Route path="/reset" exact component={Reset}></Route>
+          <Route path="/Dashboard" exact component={Dashboard}></Route>
         </Switch>
       </Router>
     </div>  
