@@ -1,49 +1,53 @@
+body{
+    background: url('./assets/background.png')
+}
 #login-heading {
     margin-top: 0;
 }
-
 .login-card {
-    width: 38%;
-    background-color: black;
+    width: 30%;
     text-align: center;
     justify-content: center;
     align-content: center;
     padding: 30px;
-    height: 257px;
+    height: 65%;
+    
 }
-
 .heading {
     color: rgb(72, 39, 28);
     font-size: 23px;
 }
-
 .login-container {
     height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
 }
-
 #registration-heading {
     margin-top: 0;
 }
-
 .registration-card {
-    width: 36%;
+    width: 26%;
     background-color: black;
     text-align: center;
     justify-content: center;
     align-content: center;
     padding: 30px;
 }
-
 .registration-container {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
+.header-Datails{
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 7vh;
+    justify-content: space-between;
+  
+}
 .heading {
     color: rgb(72, 39, 28);
     font-size: 23px;
@@ -68,6 +72,7 @@
     width:30%;
     height:450px;
     border:1px solid black;
+    overflow-y: scroll;
 }
 .chat-card{
     width:50%;
@@ -96,8 +101,61 @@
     align-items: center;
     justify-content: space-between;
 }
-.header-details{
+.dashboard-card1{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+}
+.dashboard-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.receiver-css{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+}
+.sender-css{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.forgot-card {
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    margin: 1;
+    height: 46%;   
+}
+.forgot-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+}
+.forgot-container>div {
+    margin: 1em;
+}
+.header-area > div{
+    margin: 1em;
+}
+.reset-container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
+.reset-card {
+    width: 25%;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    padding: 30px;
+    margin: 1;
+    height: 46%;   
+}

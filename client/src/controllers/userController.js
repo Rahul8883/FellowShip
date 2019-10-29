@@ -14,7 +14,7 @@ var controller = {
                // response.status(200).send("register successfully")
             })
             .catch(error => {
-                console.log("Registration Failed... " + error);
+                console.log("Registration Failed... ", error);
             })
     },
 
@@ -80,7 +80,7 @@ var controller = {
     },
 
     getAllMsg() {
-        return axios.get("http://localhost:4000/getAllMsg")
+        return axios.get("http://localhost:4000/getUsersMsg")
             .then(response => {
                 console.log("response :- ", response);
                 return response

@@ -1,41 +1,43 @@
-const mongoose =reqyure('mongoose');
+const mongoose =require('mongoose');
 var schema = mongoose.Schema;
 const chatUserData = new schema({
-    sender :{
+    'sender' :{
     type : String,
     require : true
     },
-    receiver : {
+    'receiver' : {
         type : String,
         require : true
     },
-    message : {
+    'message' : {
         type : String,
         require : true
     }
 })
 const chatRegister = mongoose.model('chat', chatUserData);
 exports.addMessage=(req, callback)=>{
-console.log("model is working properly !!");
+console.log("model is working properly !!",req.sender);
 var msg = new chatRegister({
-    "sender" : req.body.sender,
-    "receiver" : req.body.receiver,
-    "message" : req.body.message
+    "sender" : req.sender,
+    "receiver" : req.receiver,
+    "message" : req.message
 })
 msg.save((err, result)=>{
     if(err){
         callback(err)
     }else{
-        callback(result)
+        console.log("yes enterd in succfess chat");
+        
+        callback(null,result)
     }
 })
 }
 exports.getUserMessage=(req, callback)=>{
-chatRegister.fiind({}, (err, result)=>{
+chatRegister.find({}, (err, result)=>{
     if(err){
         callback(err)
     }else{
-        callback(result)
+        callback(null,result)
     }
 })
 }

@@ -44,6 +44,8 @@ exports.login = (req, res) => {
         } else {
             console.log("Controller login ", req.body);
             userService.login(req, (err, data) => {
+                // console.log("id------------>",req);
+                
                 if (err) {
                     console.log("err", err);
                     res.status(404).send(err)
@@ -72,6 +74,8 @@ exports.forgot = (req, res) => {
         } else {
             console.log("Controller login ", req.body);
             userService.forgot(req, (err, data) => {
+                console.log("data login------>",data);
+                
                 if (err) {
                     console.log("err", err);
                     res.status(404).send(err)
@@ -79,8 +83,8 @@ exports.forgot = (req, res) => {
                     console.log("result in forgot ", data);
                     console.log('after token generation', token.generateToken(data.id));
                     const generatedToken = token.generateToken(data.id);
-                    const url = 'http://localhost:4000/reset/' + generatedToken;
-                    mailer.sendMail(req.body.email, url)
+                    const url = 'http://localhost:4000/reset' + generatedToken;
+                    mailer.sendMail(data.email, url)
                     res.status(200).send(url)
                 }
             })
@@ -136,3 +140,4 @@ exports.getUsers = (req, res) => {
         console.log("error", error);
     }
 }
+

@@ -1,4 +1,5 @@
 const modelAccess = require('../model/userModel');
+
 exports.register = (req, callback) => {
     try {
         console.log("data in services", req.body);
@@ -65,7 +66,7 @@ exports.getUsers = (req, callback) => {
             if (err) {
                 callback(err);
             } else {
-                console.log("Entered reset services");
+                console.log("Entered users ");
                 callback(null, data);
             }
         })
@@ -73,3 +74,4 @@ exports.getUsers = (req, callback) => {
         console.log(e);
     }
 }
+

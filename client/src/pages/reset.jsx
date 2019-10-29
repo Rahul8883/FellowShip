@@ -39,7 +39,14 @@ export default class reset extends Component {
         return (
             <div className="reset-container">
                 <Card className="reset-card">
+                    <div className="reset-content">
                     <div>
+                        <div>
+                    <div >
+                                <span   style={{ fontFamily: "TimesNewRoman", fontSize: "20px" }}>
+                                    Reset password
+                </span>
+                            </div>
                         <div>
                         <TextField
                             label="password"
@@ -60,6 +67,8 @@ export default class reset extends Component {
                         <div>
                             <Button color="primary" onClick={this.handleReset}>Submit</Button>
                         </div>
+                    </div>
+                    </div>
                     </div>
                 </Card>
             </div>
