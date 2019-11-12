@@ -1,8 +1,13 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create chat controller 
+* @file : chatController.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const chatServices = require('../services/chatServices')
 exports.getUsersMsg = (req, res) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         chatServices.getUsersMsg(req, (err, data) => {
             if (err) {
@@ -18,11 +23,7 @@ exports.getUsersMsg = (req, res) => {
         console.log("error", error);
     }
 }
-
 exports.addMsg = (req, callback) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         chatServices.addMsg(req, (err, data) => {
             if (err) {
@@ -33,7 +34,6 @@ exports.addMsg = (req, callback) => {
                 callback(null,data) 
             }
         })
-
     } catch (error) {
         console.log("error", error);
     }

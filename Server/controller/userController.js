@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create user controller 
+* @file : userController.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const userService = require('../services/userServices');
 const token = require('../token');
 const mailer = require('../middleware/nodeMailer')
@@ -59,9 +67,6 @@ exports.login = (req, res) => {
     }
 }
 exports.forgot = (req, res) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         req.checkBody('email', 'email is invalid ').isEmail();
         var error = req.validationErrors();
@@ -94,9 +99,6 @@ exports.forgot = (req, res) => {
     }
 }
 exports.reset = (req, res) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         req.checkBody('password', 'password is invalid').notEmpty().len(8, 13);
         req.checkBody('conformPassword', 'conformPassword is invalid')
@@ -123,9 +125,6 @@ exports.reset = (req, res) => {
     }
 }
 exports.getUsers = (req, res) => {
-    console.log('====================================');
-    console.log("in con");
-    console.log('====================================');
     try {
         userService.getUsers(req, (err, data) => {
             if (err) {
@@ -135,7 +134,6 @@ exports.getUsers = (req, res) => {
                 res.status(200).send(data)
             }
         })
-
     } catch (error) {
         console.log("error", error);
     }

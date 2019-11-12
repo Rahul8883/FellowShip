@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create forgot page 
+* @file : forgot.jsx
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 20-10-2019
+*/
 import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';
@@ -19,13 +27,12 @@ export default class forgot extends Component {
             email: email
         })
     }
-
     handleForgot = () => {
         console.log("Entered in handle Reset in");
         controller.forgot(this.state.email).then((res) => {
-            console.log("login", res);
+            console.log("Reset", res);
         }).catch(err => {
-            console.log("err in login component ", err);
+            console.log("err in Reset component ", err);
         })
     }
     handleRegister = () => {
@@ -88,9 +95,6 @@ export default class forgot extends Component {
                                     </Grid>
                                 </div>
                             </div>
-                            {/* <div>
-                            <Button color="primary" onClick={this.handleForgot}>submit</Button>
-                        </div> */}
                         </div>
                     </div>
                 </Card>

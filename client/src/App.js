@@ -9,8 +9,7 @@ import Dashboard from './components/DashBoard';
 import Demo from './Demo/demo'
 class App extends Component {
   render() {
-    return (
-      <div>
+    return ( 
       <Router>
         <Switch>
           <Route path="/"exact component={Registration}></Route>
@@ -22,7 +21,6 @@ class App extends Component {
           <Route path="/Dashboard" component={Dashboard}></Route>
         </Switch>
       </Router>
-    </div>  
     );
   }
 }

@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create userRouter 
+* @file : userRouter.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const express = require('express');
 const router = express.Router();
 const userController = require('../controller/userController')

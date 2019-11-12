@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create chat service 
+* @file : chatService.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const modelChat = require('../model/chatModel')
 exports.getUsersMsg = (req, callback) => {
     try {

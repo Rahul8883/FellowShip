@@ -1,6 +1,8 @@
+/**
+ * @middeleWare: this is use to send the mail to the client and user
+ */
 const nodeMailer = require('nodemailer');
 exports.sendMail = (email, url) => {
-    // console.log("email in node mailer", process.env.name,process.env.password);
     console.log("url in node mailer", url);
     var smtpTransport = nodeMailer.createTransport({
         service: 'gmail', // sets automatically host, port and connection security settings
@@ -8,8 +10,6 @@ exports.sendMail = (email, url) => {
             user: process.env.name,
             pass: process.env.password
         }
-
-
     });
     console.log("dsfsdfsfdsf", smtpTransport.auth);
     var mailOptions = {

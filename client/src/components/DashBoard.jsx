@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create dashboard 
+* @file : Dashboard.jsx
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 20-10-2019
+*/
 import React from 'react';
 import { Card, MenuItem, Button } from '@material-ui/core';
 import TextField from '@material-ui/core/TextField';
@@ -20,7 +28,6 @@ export default class Dashboard extends React.Component {
         try {
             this.setState({
                 sender: localStorage.getItem('email')
-
             })
             this.getAllMessages();
             controller.getUsers().then((res) => {

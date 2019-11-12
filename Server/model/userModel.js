@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create userModel 
+* @file : usermodel.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const bcrypt = require('bcrypt');
 const mongoose = require('mongoose');
 mongoose.set({useUnifiedTopology: true, useNewUrlParser: true})
@@ -43,7 +51,7 @@ exports.register = (req, callback) => {
                         if (err) {
                             callback(err);
                         } else {
-                            console.log("data in user save", data);
+                            console.log("Data in user save", data);
                             callback(null, data);
                         }
                     })

@@ -1,5 +1,12 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create userservice 
+* @file : userService.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const modelAccess = require('../model/userModel');
-
 exports.register = (req, callback) => {
     try {
         console.log("data in services", req.body);

@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : token generation and verification
+* @file : token.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 var jwt = require('jsonwebtoken');
 exports.generateToken = (id) => {
     console.log("secrete key in generate token", process.env.SECRET_KEY);
@@ -6,7 +14,6 @@ exports.generateToken = (id) => {
 }
 exports.verifyToken = (req, res, next) => {
     console.log("Entered to verify token");
-
     jwt.verify(req.params.token, process.env.SECRET_KEY, (err, data) => {
         if (err) {
             console.log("Error in Verify token", err);
@@ -17,7 +24,6 @@ exports.verifyToken = (req, res, next) => {
                 'decoded': data.id
             }
             console.log("req.decoded in verify token", req.decoded);
-
             next();
         }
     });

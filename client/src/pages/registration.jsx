@@ -1,3 +1,11 @@
+/**
+* @Execution : 1. default node cmd> node .js
+* @Purpose : create registration page 
+* @file : registration.jsx
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 20-10-2019
+*/
 import React, { Component } from "react";
 import TextField from '@material-ui/core/TextField';
 import { Button, Card } from '@material-ui/core/';

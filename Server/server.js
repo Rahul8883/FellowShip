@@ -1,7 +1,11 @@
 /**
- * @description: server file
- * @filename: server.js
- */
+* @Execution : 1. default node cmd> node .js
+* @Purpose :create server and connect with database and socket io  
+* @file : server.js
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 10-10-2019
+*/
 const dbConn = require('../Server/configuration/dbConfig')
 const routes = require('../Server/routes/userRoutes');
 const mongoose = require('mongoose');
