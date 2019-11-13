@@ -1,5 +1,8 @@
-
-
+/**
+    * @Auther: Rahul Ranjan
+    * @purpose: Facade Design pattern 
+    * @Since: 09-oct-2019
+    */
 var Mortgage = function (name) {
     this.name = name;
 }
@@ -18,6 +21,7 @@ Mortgage.prototype = {
         return this.name+" has been "+result+" for a "+amount+" mortagage";
     }
 }
+
 var Bank=function(){
     this.verify=function(name, amount){
         return true;
@@ -29,14 +33,17 @@ var Credit=function(){
         return true;
     }
 }
+
 var Background=function(){
     this.check=function(name){
         return true;
     }
 }
+
 function run(){
     var mortgage= new Mortgage("Rahul Ranjan");
     var result=mortgage.applyFor("$50000")
     console.log(result);
 }
+
 run();

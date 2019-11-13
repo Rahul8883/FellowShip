@@ -3,7 +3,6 @@
     * @purpose: Prototype Design pattern 
     * @Since: 09-oct-2019
     */
-
 function Customer(first, last, status) {
     this.first = first;
     this.last = last;
@@ -13,6 +12,7 @@ function Customer(first, last, status) {
             ", status: " + this.status);
     };
 }
+
 function customerPrototype(proto) {
     this.proto = proto;
     this.clone = function () {
