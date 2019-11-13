@@ -1,7 +1,7 @@
 /**
 * Execution : 1. default node cmd> node .js
-* @Purpose : Palindrome programe
-* @file : pelindrome.js
+* @Purpose :  Day of Week
+* @file : dayOfWeek.js
 * @module : Algorithm program
 * @author : Rahul Ranjan
 * @version : 1.0.0
@@ -9,5 +9,7 @@
 */
 var readsync = require('readline-sync')
 var access = require('../Utility/Algorithm_Utility')
-var Userinput = readsync.question("Enter the value for palindrome: ");
-var result = access.isPlindrome(Userinput);
+var day = readsync.questionInt("Enter the day")
+var month = readsync.questionInt("Enter the month")
+var year = readsync.questionInt("Enter the year")
+access.dayOfWeek(day, month, year);
