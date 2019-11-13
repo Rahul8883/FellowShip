@@ -1,3 +1,12 @@
+/**
+* Execution : 1. default node cmd> node .js
+* @Purpose :Binary to Decimal program
+* @file : binaryToDecimal.js
+* @module : Data Structure Program
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 12-10-2019
+*/
 var readsync = require('readline-sync');
 var BinaryNumber = readsync.question("Enter the Binary Number:-->");
 var value = isBinaryToDecimalNum(BinaryNumber);

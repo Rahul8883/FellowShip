@@ -127,19 +127,6 @@ class UnorderedLinkedList {
         console.log(str);
     }
 }
-// var l1 = new UnorderedLinkedList();
-// l1.insertAtFirst("Rahul");
-// l1.insertAtFirst("ramayana");
-// l1.insertAtFirst("bridgelabz");
-// l1.removeAtposition(2);
-// //l1.viewList();
-// //l1.removeAtLast();
-// //l1.removeAtFirst();
-// //l1.viewList();
-// l1.insertAtFirst(10);
-// l1.insertAtLast("rahulRanjan");
-// l1.insertAtLast(20);
-// l1.viewList();
 module.exports = {
     Node, UnorderedLinkedList
 }

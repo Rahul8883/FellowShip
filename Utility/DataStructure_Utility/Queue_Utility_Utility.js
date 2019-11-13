@@ -4,11 +4,13 @@ class Node {
         this.next = null;
     }
 }
+/*---------------------------Defining Queue --------------------------*/
 class Queue {
     constructor() {
         this.head = null;
         this.tail = null;
     }
+    /*---------------------------Add element into Queue --------------------------*/
     enqueue(data) {
         var node = new Node(data);
         if (this.head !== null) {
@@ -19,6 +21,7 @@ class Queue {
             this.tail = node;
         }
     }
+    /*---------------------------Remove element into Queue --------------------------*/
     dequeue() {
         if (this.head !== null) {
             return 'No item !'
@@ -28,7 +31,7 @@ class Queue {
             return itemToPop;
         }
     }
-
+/*---------------------------for check the size of Queue --------------------------*/
     size() {
         let current, counter;
         [current, counter] = [this.head, 0];
@@ -38,14 +41,11 @@ class Queue {
         }
         return counter;
     }
+    /*---------------------------check either Queue is empty or not--------------------------*/
     isEmpty() {
         return this.length() < 1;
     }
-    show() {
-
-
-
-    }
+   
     peek() {
         if (this.head == null) {
             return this.head.data;
@@ -54,6 +54,6 @@ class Queue {
         }
     }
 }
-module exports={
-    
+module.exports={
+    Queue
 }

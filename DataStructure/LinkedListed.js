@@ -1,19 +1,16 @@
 /*------------User Defined Class Node----------------*/
-
-
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-
 class UnorderedLinkedList {
     constructor() {
         this.head = null;
         this.size = 0;
     }
-    /*---------------isEmpty-----------------------*/
+/*---------------isEmpty-----------------------*/
     isEmpty() {
         if (this.size == 0) {
             return true;
@@ -22,12 +19,12 @@ class UnorderedLinkedList {
         }
     }
 
-    /*-------------Find the size of LinkedList-----------*/
+/*-------------Find the size of LinkedList-----------*/
 
     getListSize() {
         console.log(this.size);
     }
-    /*---------Add the data at first index-----------*/
+/*---------Add the data at first index-----------*/
 
     insertAtFirst(data) {
         var new_Node = new Node(data);
@@ -42,7 +39,7 @@ class UnorderedLinkedList {
         }
     }
 
-    /*------------insert at last-----------*/
+/*------------insert at last-----------*/
     insertAtLast(data) {
         var new_Node = new Node(data);
         var temp = this.head;
@@ -52,7 +49,7 @@ class UnorderedLinkedList {
         }
         temp.next = new_Node;
     }
-    /*--------------insert at specified index----------*/
+/*--------------insert at specified index----------*/
     insertAtPosition(data, index) {
         if (index == 1) {
             this.insertAtFirst(data);
@@ -71,7 +68,7 @@ class UnorderedLinkedList {
         }
     }
 
-    /*------------Remove at first position--------------*/
+/*------------Remove at first position--------------*/
 
     removeAtFirst() {
         if (this.head == null) {
@@ -82,7 +79,7 @@ class UnorderedLinkedList {
         }
     }
 
-    /*------------Remove at last index---------*/
+/*------------Remove at last index---------*/
 
     removeAtLast() {
         if (this.head == null) {
@@ -101,12 +98,6 @@ class UnorderedLinkedList {
     }
 
     removeAtposition(index) {
-        // if (this.head = null) {
-        //     console.log("List is already Empty..");
-        // } else if (this.size == 1) {
-        //     this.head = null;
-        //     this.size--;
-        // } else {
         var temp = this.head;
         var temp1 = this.head.next;
         for (var i = 0; i < index; i++) {
@@ -119,11 +110,8 @@ class UnorderedLinkedList {
         }
         temp.next = temp1.next;
         this.size--;
-        //  }
     }
-
-    /*-----------------Search the Node-----------*/
-
+/*-----------------Search the Node-----------*/
     search(data) {
         var temp = head;
         while (temp !== null) {
@@ -134,8 +122,7 @@ class UnorderedLinkedList {
             }
         }
     }
-    /*-----------Display the List------------*/
-
+/*-----------Display the List------------*/
     viewList() {
         console.log("Data is:--");
         var temp;
@@ -149,32 +136,23 @@ class UnorderedLinkedList {
                 str += temp.data + " ";
                 temp = temp.next;
             }
-
-            // for (var i = 0; i <= this.size; i++) {
-            //     console.log(" " + this.data);
-            //     temp = temp.next;
-            // }
         }
         console.log(str);
-
-
     }
 }
-// var l1 = new UnorderedLinkedList();
-// l1.insertAtFirst("Rahul");
-// l1.insertAtFirst("ramayana");
-// l1.insertAtFirst("bridgelabz");
-// l1.removeAtposition(2);
-// //l1.viewList();
-// //l1.removeAtLast();
-// //l1.removeAtFirst();
-// //l1.viewList();
-// l1.insertAtFirst(10);
-// l1.insertAtLast("rahulRanjan");
-// l1.insertAtLast(20);
-// l1.viewList();
-
-
+var l1 = new UnorderedLinkedList();
+l1.insertAtFirst("Rahul");
+l1.insertAtFirst("ramayana");
+l1.insertAtFirst("bridgelabz");
+l1.removeAtposition(2);
+l1.viewList();
+l1.removeAtLast();
+l1.removeAtFirst();
+l1.viewList();
+l1.insertAtFirst(10);
+l1.insertAtLast("rahulRanjan");
+l1.insertAtLast(20);
+l1.viewList();
 module.exports={
     Node, UnorderedLinkedList
 }

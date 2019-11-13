@@ -1,3 +1,12 @@
+/**
+* Execution : 1. default node cmd> node .js
+* @Purpose :Define stack using linkedList program
+* @file : stackUsingLinkedList.js
+* @module : Data Structure Program
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 12-10-2019
+*/
 class node {
 	constructor() {
 		this.data = data;

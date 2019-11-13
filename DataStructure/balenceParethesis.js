@@ -1,8 +1,17 @@
+/**
+* Execution : 1. default node cmd> node .js
+* @Purpose :Balence Prenthesis program
+* @file : balenceParenthesis.js
+* @module : Data Structure Program
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 12-10-2019
+*/
 var readsync = require('readline-sync')
 var access = require('../Utility/DataStructure_Utility')
 var s1 = readsync.question("Enter the userinput:--")
-var  stackUtil= require('../Utility/stack_Utility')
-var ch ;
+var stackUtil = require('../Utility/stack_Utility')
+var ch;
 var stk = new stackUtil.stack;
 
 for (var i = 0; i < s1.length; i++) {
@@ -26,18 +35,18 @@ for (var i = 0; i < s1.length; i++) {
                 return;
             }
                 break;
-            case ')': if(stk.pop()!=='('){
+            case ')': if (stk.pop() !== '(') {
                 console.log("Not Balenced !!");
-                return ;
+                return;
             }
-            break;
+                break;
         }
 
     }
 }
-if(stk.isEmpty()){
+if (stk.isEmpty()) {
     console.log("Balenced !!");
-    
-}else{
+
+} else {
     console.log("Not Balenced!!");
 }

@@ -1,4 +1,13 @@
- class PrimeAnagramStack {
+/**
+* Execution : 1. default node cmd> node .js
+* @Purpose :Define prime Anagram using stack program
+* @file : primeAnagramStack.js
+* @module : Data Structure Program
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 12-10-2019
+*/
+class PrimeAnagramStack {
 	constructor() {
 	var obj = new StackUsingLinkedlist();
 		var b;
