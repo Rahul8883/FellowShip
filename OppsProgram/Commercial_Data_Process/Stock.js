@@ -1,11 +1,18 @@
+/**
+* Execution : 1. default node cmd> node .js
+* @Purpose :commercial detail
+* @file : Stock.js
+* @module : Object oriented program
+* @author : Rahul Ranjan
+* @version : 1.0.0
+* @since : 22-10-2019
+*/
 var Commer=require('../Commercial_Data_Process/Commercial')
 var readline = require('readline-sync');
 var fs = require('fs');
 var content = fs.readFileSync('ComerPackage.json', 'utf-8');
-//console.log(content);
 var obj = JSON.parse(content);
 var len = obj.AccountList.length;
-//console.log(len);
     var array = [];
     for(var i=0; i<len; i++){
         var AccountName = obj.AccountList[i].AccountName;
@@ -21,7 +28,6 @@ var len = obj.AccountList.length;
             "Stock_Price": StockPrice
         }
         array.push(data);
-
         console.log("inventoryArray", array);
         let value = JSON.stringify(array);
         fs.writeFileSync('_OutPut.json', value);

@@ -16,6 +16,7 @@ module.exports = {
         }
         console.log(input);
     },
+
     /**
      * @Auther: Rahul Ranjan
      * @param {First User input } string_1 
@@ -124,6 +125,7 @@ module.exports = {
         }
         return (items[middleIndex] != value) ? -1 : middleIndex;
     },
+
     /**@author: Rahul Ranjan
      * @purpose: This function is use to find the search iteam into the sorted array using Binary Search for String!! 
      * @Since: 25-sep-2019
@@ -145,6 +147,7 @@ module.exports = {
         }
         return (items[middleIndex] != value) ? -1 : middleIndex;
     },
+
     /**@author: Rahul Ranjan
         * @purpose: This function is use to sort array using Bubble sort for integer!! 
         * @Since: 25-sep-2019
@@ -167,6 +170,7 @@ module.exports = {
             return array;
         }
     },
+
     /**@author: Rahul Ranjan
          * @purpose: This function is use to sort array using Bubble sort for String!! 
          * @Since: 25-sep-2019
@@ -189,6 +193,7 @@ module.exports = {
             return array;
         }
     },
+
     /**@author: Rahul Ranjan
      * @purpose: This function is use to sort array using insertion sort for integer!! 
      * @Since: 25-sep-2019
@@ -210,6 +215,7 @@ module.exports = {
             return array;
         }
     },
+
     /**@author: Rahul Ranjan
      * @purpose: This function is use to sort array using insertion sort for String!! 
      * @Since: 25-sep-2019
@@ -231,6 +237,7 @@ module.exports = {
             return array;
         }
     },
+
     /**
      * @author: Rahul Ranjan
      * @purpose: This function is use to find day of the week
@@ -262,6 +269,7 @@ module.exports = {
             console.log("saterday");
         }
     },
+
     /**
     * @author: Rahul Ranjan
     * @purpose: This function is use to find the Change/variable form the given amount !!.
@@ -297,6 +305,7 @@ module.exports = {
             console.log(TotalAmount[i] + "--Notes :   " + count[i]);
         }
     },
+
     /**
     * @author: Rahul Ranjan
     * @purpose: This function is use to change the temp conversion.
@@ -328,6 +337,7 @@ module.exports = {
         var payment = Math.floor((p * r) / 1 - Math.pow((1 + r), (-n)));
         console.log("Monthly payment--" + payment);
     },
+    
     /**
      * @author: Rahul Ranjan
      * @purpose: Write a static function sqrt  to compute the square root of a nonnegative number c given in

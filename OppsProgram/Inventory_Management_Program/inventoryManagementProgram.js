@@ -7,7 +7,6 @@
     * will be with InventoryManager
     * @Since: 08-oct-2019
     */
-
 // Accessing the Glossary class//
 var utiRice = require('../inventrydataManagement/Glossary');
 //Accessing the file reader Package//

@@ -15,6 +15,7 @@ module.exports = {
         let resplacedString = givenStringIs.replace('<Username>', str)
         console.log(resplacedString);
     },
+    
     /*
   @purpose: Flip Coin and print percentage of Heads and Tails 
   @Auther: Rahul Ranjan
@@ -22,7 +23,6 @@ module.exports = {
   @return 
   @Since: 25-sep-2019
   */
-
     isFlipCoin(toss) {
         var head = 0,
             tail = 0;
@@ -40,6 +40,7 @@ module.exports = {
         var h_per = ((head / Toss) * 100);
         console.log("percentage of head to tail is: head=" + h_per + " tail:=" + t_per);
     },
+
     /*
   @purpose: Leap Year
   @Auther: Rahul Ranjan
@@ -58,6 +59,7 @@ module.exports = {
             console.log("Invalid input!!");
         }
     },
+
     /*
   @purpose: Power of 2
   @Auther: Rahul Ranjan
@@ -75,6 +77,7 @@ module.exports = {
             console.log("Invalid input !!");
         }
     },
+
     /*
   @purpose:  Prints the Nth harmonic number: 1/1 + 1/2 + ... + 1/N 
   @Auther: Rahul Ranjan
@@ -91,6 +94,7 @@ module.exports = {
             console.log("Total sum of harmonic serious is" + sum);
         }
     },
+
     /*
     @purpose: Computes the prime factorization of N using brute force.
     @Auther: Rahul Ranjan
@@ -109,6 +113,7 @@ module.exports = {
             console.log(userinput);
         }
     },
+
     /*
     @purpose: Write a program Distance.java that takes two integer command-line arguments x and y and 
     prints the Euclidean distance from the point (x, y) to the origin (0, 0). The formulae
@@ -122,6 +127,7 @@ module.exports = {
         var DistanceResult = Math.sqrt((Math.pow(userinput_1, 2)) + (Math.pow(userinput_2, 2)));
         console.log("Euclidean Distance is: " + DistanceResult);
     },
+
     /*
   @purpose: Coupon Number
   @Auther: Rahul Ranjan
@@ -137,6 +143,7 @@ module.exports = {
         }
         console.log("Coupon Number is->" + coupan);
     },
+
     /*
     @purpose: A program with cubic running time. Read in N integers and counts the 
       number of triples that sum to exactly 0.
@@ -160,6 +167,7 @@ module.exports = {
             }
         }
     },
+
     /*
     @purpose: StopWath to find ellapse time !!.
     @Auther: Rahul Ranjan
@@ -177,6 +185,7 @@ module.exports = {
         var date = new Date();
         return date.getMilliseconds();
     },
+
     findTime(readsync) {
         // var spTime;
         // var stTime;

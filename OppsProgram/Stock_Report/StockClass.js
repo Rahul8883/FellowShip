@@ -1,4 +1,3 @@
-
 class Resultant {
     constructor(Stock_Name, share_Price) {
         this.Stock_Name = Stock_Name;
